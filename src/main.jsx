@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LandingPage from './routes/LandingPage.jsx'
+import "./global.css"
 
 const router = createBrowserRouter([
   {
