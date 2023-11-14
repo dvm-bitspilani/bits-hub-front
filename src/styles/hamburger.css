@@ -1,0 +1,46 @@
+.hamburger{
+    position: absolute;
+    top: 16px;
+    right: 24px;
+}
+.hamburger_icon{
+    border-radius: 10px;
+    border: 0.849px solid #111;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 20px;
+    align-items: center;
+}
+.hamburger_icon:hover{
+    cursor: pointer;
+}
+.hamburger_icon span{
+    width: 24px;
+    height: 2px;
+    background-color: #111;
+}
+.hamburger_links{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 0.849px solid #111;
+    background: #FFF;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+}
+.hamburger_links a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'IF Kica Regular';
+    font-size: 18.672px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.027px;
+    text-decoration-line: underline;
+}
