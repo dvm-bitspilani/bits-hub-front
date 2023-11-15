@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LandingPage from './routes/LandingPage.jsx'
-import "./global.css"
+import './global.css'
 
 const router = createBrowserRouter([
   {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     path: '/clubs',
     element: <h1>clubs</h1>,
   },
-  //....... add more routes 
+  //....... add more routes
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

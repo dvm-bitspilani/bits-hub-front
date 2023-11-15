@@ -4,17 +4,12 @@ import '../styles/landing.css'
 import Hamburger from '../components/Hamburger'
 
 function LandingPage() {
-
   return (
     <React.Fragment>
       <div className="landing_bg">
         <Hamburger />
-  
       </div>
-      <Link to="/recruitments">
-        
-      </Link>
-
+      <Link to="/recruitments"></Link>
     </React.Fragment>
   )
 }
