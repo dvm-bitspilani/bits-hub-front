@@ -26,13 +26,11 @@ function Hamburger() {
           ref={hamburgerLinksRef}
         >
           <Link to="/login" style={{ marginTop: '16px' }}>
-            {' '}
-            login{' '}
+            login
           </Link>
-          <Link to="/events"> events </Link>
+          <Link to="/events">events</Link>
           <Link to="/clubs" style={{ marginBottom: '16px' }}>
-            {' '}
-            clubs{' '}
+            clubs
           </Link>
         </div>
       </div>
