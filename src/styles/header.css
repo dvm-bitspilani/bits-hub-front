@@ -1,0 +1,33 @@
+.header-bg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+.hamContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    cursor: pointer;
+    gap: 8px;
+}
+.hamContainer div{
+    height: 2px;
+    background-color: #fff;
+}
+.hamline1 , .hamline3{
+    width: 42px;
+}
+.hamline2{
+    width: 30px;
+}
+.header-bg h1{
+    font-family: 'Gilroy-Bold';
+    color: #fff;
+    font-size: 60px;
+    user-select: none;
+}
+.header-bg img{
+    cursor: pointer;
+}

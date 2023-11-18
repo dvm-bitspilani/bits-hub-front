@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../components/Header'
+import "../styles/landingpage.css"
 
 function LandingPage() {
   return <React.Fragment>
-    <h1>Landing page</h1>
+    <div className='landing-bg'>
+      <Header />
+    </div>
   </React.Fragment>
 }
 
