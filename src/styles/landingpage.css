@@ -4,3 +4,19 @@
   min-height: 100dvh;
   padding-top: 1vh;
 }
+.scroll-down{
+  display: flex;
+  height: 9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-down span{
+  font-family: 'Google Sans normal';
+  font-size: 32px;
+  color: #BEBEBE; 
+}
+.scroll-down img{
+  padding-left: 8px;
+  transform: translateY(2px);
+}
