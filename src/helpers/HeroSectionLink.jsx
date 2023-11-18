@@ -9,6 +9,7 @@ function HeroSectionLink({
   bgImage,
   text,
   textHover,
+  textHoverSize,
   textColor,
   icon,
 }) {
@@ -37,7 +38,7 @@ function HeroSectionLink({
         )}
         {isHovered && (
           <div className="marquee-container">
-            <div style={{ color: textColor }}>
+            <div style={{ color: textColor , fontSize: textHoverSize }}>
               <span className='span1'>&nbsp;{textHover}&nbsp;</span>
               <span className='span2'>&nbsp;{textHover}&nbsp;</span>
             </div>
@@ -58,4 +59,5 @@ HeroSectionLink.propTypes = {
   textHover: PropTypes.string,
   textColor: PropTypes.string,
   icon: PropTypes.string,
+  textHoverSize: PropTypes.string,
 }

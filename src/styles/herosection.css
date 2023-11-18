@@ -43,7 +43,6 @@
 }
 .marquee-container div{
     font-family: 'Google Sans normal';
-    font-size: 52px;
 }
 .marquee-container div .span2{
     animation: marquee 10s linear infinite;

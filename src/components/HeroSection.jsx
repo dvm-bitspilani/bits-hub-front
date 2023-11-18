@@ -17,6 +17,7 @@ function HeroSection() {
           textColor={'#FFFFFF'}
 					textHover={'Find clubs and assocs you are interested in'}
           icon={rightIcon}
+          textHoverSize={'84px'}
           backgroundColor="#2541B2"
           gridArea=" 1 / 1 / 3 / 3"
         />
@@ -25,6 +26,7 @@ function HeroSection() {
           textColor={'#000000'}
 					textHover={'Check out upcoming events'}
           icon={eventsIcon}
+          textHoverSize={'52px'}
           backgroundColor="#ECECEC"
           gridArea=" 1 / 3 / 2 / 4"
         />
@@ -33,6 +35,7 @@ function HeroSection() {
           textColor={'#FFFFFF'}
 					textHover={'PlaceHolder text which will be replaced'}
           icon={profileIcon}
+          textHoverSize={'52px'}
           backgroundColor="#C13E42"
           gridArea=" 1 / 4 / 2 / 5"
         />
@@ -41,6 +44,7 @@ function HeroSection() {
           textColor={'#FFFFFF'}
 					textHover={'PlaceHolder text which will be replaced'}
           icon={recruitmentsIcon}
+          textHoverSize={'52px'}
           backgroundColor="#1C976B"
           gridArea=" 2 / 3 / 3 / 5"
         />
