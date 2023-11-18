@@ -6,9 +6,18 @@
 html,
 body {
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 
 @font-face {
   font-family: 'Gilroy-Bold';
   src: url(./fonts/Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: 'The 27 Club';
+  src: url(./fonts/The27Club.otf);
 }

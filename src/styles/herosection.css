@@ -4,11 +4,26 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   gap: 16px;
+  height: 80vh;
 }
 .hero-link {
-  aspect-ratio: 1/1;
   border-radius: 24px;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: end;
+}
+.hero-link-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 32px;
+    padding-bottom: 24px;
+}
+.hero-link-label p{
+    font-family: 'The 27 Club';
+    text-transform: uppercase;
+    font-size: 50px;
 }
