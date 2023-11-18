@@ -15,6 +15,7 @@ function HeroSection() {
           bgImage
           text={'Clubs & Assocs'}
           textColor={'#FFFFFF'}
+					textHover={'Find clubs and assocs you are interested in'}
           icon={rightIcon}
           backgroundColor="#2541B2"
           gridArea=" 1 / 1 / 3 / 3"
@@ -22,6 +23,7 @@ function HeroSection() {
         <HeroSectionLink
           text={'Events'}
           textColor={'#000000'}
+					textHover={'Check out upcoming events'}
           icon={eventsIcon}
           backgroundColor="#ECECEC"
           gridArea=" 1 / 3 / 2 / 4"
@@ -29,6 +31,7 @@ function HeroSection() {
         <HeroSectionLink
           text={'Profile'}
           textColor={'#FFFFFF'}
+					textHover={'PlaceHolder text which will be replaced'}
           icon={profileIcon}
           backgroundColor="#C13E42"
           gridArea=" 1 / 4 / 2 / 5"
@@ -36,6 +39,7 @@ function HeroSection() {
         <HeroSectionLink
           text={'recruitments'}
           textColor={'#FFFFFF'}
+					textHover={'PlaceHolder text which will be replaced'}
           icon={recruitmentsIcon}
           backgroundColor="#1C976B"
           gridArea=" 2 / 3 / 3 / 5"

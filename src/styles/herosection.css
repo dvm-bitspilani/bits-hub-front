@@ -13,6 +13,7 @@
   background-position: center;
   display: flex;
   align-items: end;
+  position: relative;
 }
 .hero-link-label{
     display: flex;
@@ -26,4 +27,39 @@
     font-family: 'The 27 Club';
     text-transform: uppercase;
     font-size: 50px;
+}
+.marquee-container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.marquee-container div{
+    font-family: 'Google Sans normal';
+    font-size: 52px;
+}
+.marquee-container div .span2{
+    animation: marquee 10s linear infinite;
+    display: inline-block;
+}
+.marquee-container div .span1{
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }

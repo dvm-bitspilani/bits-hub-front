@@ -21,3 +21,7 @@ html::-webkit-scrollbar {
   font-family: 'The 27 Club';
   src: url(./fonts/The27Club.otf);
 }
+@font-face {
+  font-family: 'Google Sans normal';
+  src: url(./fonts/GoogleSans-Regular.ttf);
+}

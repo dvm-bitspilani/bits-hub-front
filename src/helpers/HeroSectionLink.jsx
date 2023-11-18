@@ -8,20 +8,18 @@ function HeroSectionLink({
   gridArea,
   bgImage,
   text,
-  // textHover,
+  textHover,
   textColor,
   icon,
 }) {
-  
-	const [isHovered, setIsHovered] = useState(false)
-	
-	const style = {
+  const [isHovered, setIsHovered] = useState(false)
+
+  const style = {
     backgroundColor: backgroundColor,
     gridArea: gridArea,
     backgroundImage: bgImage ? `url(${bgImageIcons})` : 'none',
-		cursor: isHovered ? 'pointer' : 'default',
+    cursor: isHovered ? 'pointer' : 'default',
   }
-
 
   return (
     <React.Fragment>
@@ -35,6 +33,14 @@ function HeroSectionLink({
           <div className="hero-link-label">
             <p style={{ color: textColor }}>{text}</p>
             <img src={icon} alt="icon" />
+          </div>
+        )}
+        {isHovered && (
+          <div className="marquee-container">
+            <div style={{ color: textColor }}>
+              <span className='span1'>&nbsp;{textHover}&nbsp;</span>
+              <span className='span2'>&nbsp;{textHover}&nbsp;</span>
+            </div>
           </div>
         )}
       </div>
