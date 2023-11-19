@@ -21,7 +21,7 @@ function HeroSection() {
           profileHover={profileHover}
           recruitmentsHover={recruitmentsHover}
           clubsHover={clubsHover}
-          bgImage
+          bgIcons
           text={'Clubs & Assocs'}
           textColor={'#FFFFFF'}
           textHover={'Find clubs and assocs you are interested in.'}

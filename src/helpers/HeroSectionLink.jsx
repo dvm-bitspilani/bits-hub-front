@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function HeroSectionLink({
   backgroundColor,
   gridArea,
-  bgImage,
+  bgIcons,
   text,
   textHover,
   textHoverSize,
@@ -41,7 +41,7 @@ function HeroSectionLink({
           setStateHover(false)
         }}
       >
-        {bgImage && (
+        {bgIcons && (
           <div className="hero-link-bg">
             <svg
               width="122"
@@ -152,7 +152,7 @@ export default HeroSectionLink
 HeroSectionLink.propTypes = {
   backgroundColor: PropTypes.string,
   gridArea: PropTypes.string,
-  bgImage: PropTypes.bool,
+  bgIcons: PropTypes.bool,
   text: PropTypes.string,
   textHover: PropTypes.string,
   textColor: PropTypes.string,
