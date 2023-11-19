@@ -27,7 +27,7 @@ function HeroSection() {
           textHover={'Find clubs and assocs you are interested in.'}
           icon={rightIcon}
           textHoverSize={'84px'}
-          backgroundColor="#2541B2"
+          backgroundColor={eventsHover? "#454545":(profileHover?"#454545":(recruitmentsHover?"#454545":(clubsHover?"454545":"#2541B2")))}
           gridArea=" 1 / 1 / 3 / 3"
           setStateHover={setClubsHover}
         />
@@ -37,7 +37,7 @@ function HeroSection() {
           textHover={'Check out upcoming events!'}
           icon={eventsIcon}
           textHoverSize={'52px'}
-          backgroundColor="#ECECEC"
+          backgroundColor={"#ECECEC"}
           gridArea=" 1 / 3 / 2 / 4"
           setStateHover={setEventsHover}
         />
@@ -47,7 +47,7 @@ function HeroSection() {
           textHover={'PlaceHolder text which will be replaced.'}
           icon={profileIcon}
           textHoverSize={'52px'}
-          backgroundColor="#C13E42"
+          backgroundColor={clubsHover? "#515151":(eventsHover?"#515151":(recruitmentsHover?"#515151":"#C13E42"))}
           gridArea=" 1 / 4 / 2 / 5"
           setStateHover={setProfileHover}
         />
@@ -57,7 +57,7 @@ function HeroSection() {
           textHover={'PlaceHolder text which will be replaced.'}
           icon={recruitmentsIcon}
           textHoverSize={'52px'}
-          backgroundColor="#1C976B"
+          backgroundColor={clubsHover? "#656565":(eventsHover?"#656565":(profileHover?"#656565":"#1C976B"))}
           gridArea=" 2 / 3 / 3 / 5"
           setStateHover={setRecruitmentsHover}
         />

@@ -65,9 +65,9 @@ function HeroSectionLink({
                 r="61"
                 fill={
                   eventsHover
-                    ? '#8987BE'
+                    ? '#7A7A7A'
                     : recruitmentsHover
-                      ? '#8987BE'
+                      ? '#7A7A7A'
                       : '#C13E42'
                 }
               />
@@ -96,9 +96,9 @@ function HeroSectionLink({
                 transform="rotate(-25.1434 0 42.4885)"
                 fill={
                   profileHover
-                    ? '#8987BE'
+                    ? '#7A7A7A'
                     : recruitmentsHover
-                      ? '#8987BE'
+                      ? '#7A7A7A'
                       : '#FEFEFE'
                 }
               />
@@ -122,7 +122,7 @@ function HeroSectionLink({
               <path
                 d="M67.5 117L134.617 0.75H0.383034L67.5 117Z"
                 fill={
-                  eventsHover ? '#8987BE' : profileHover ? '#8987BE' : '#1C976B'
+                  eventsHover ? '#7A7A7A' : profileHover ? '#7A7A7A' : '#1C976B'
                 }
               />
             </svg>
