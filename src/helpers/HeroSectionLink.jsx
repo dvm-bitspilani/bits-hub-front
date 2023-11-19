@@ -51,10 +51,10 @@ function HeroSectionLink({
                 scale: eventsHover
                   ? '0.4'
                   : profileHover
-                  ? '1.2'
-                  : recruitmentsHover
-                  ? '0.4'
-                  : '0.8',
+                    ? '1.2'
+                    : recruitmentsHover
+                      ? '0.4'
+                      : '0.8',
               }}
             >
               <circle
@@ -65,8 +65,8 @@ function HeroSectionLink({
                   eventsHover
                     ? '#8987BE'
                     : recruitmentsHover
-                    ? '#8987BE'
-                    : '#C13E42'
+                      ? '#8987BE'
+                      : '#C13E42'
                 }
               />
             </svg>
@@ -81,10 +81,10 @@ function HeroSectionLink({
                 scale: eventsHover
                   ? '1.2'
                   : profileHover
-                  ? '0.4'
-                  : recruitmentsHover
-                  ? '0.4'
-                  : '0.8',
+                    ? '0.4'
+                    : recruitmentsHover
+                      ? '0.4'
+                      : '0.8',
               }}
             >
               <rect
@@ -96,8 +96,8 @@ function HeroSectionLink({
                   profileHover
                     ? '#8987BE'
                     : recruitmentsHover
-                    ? '#8987BE'
-                    : '#FEFEFE'
+                      ? '#8987BE'
+                      : '#FEFEFE'
                 }
               />
             </svg>
@@ -111,10 +111,10 @@ function HeroSectionLink({
                 scale: eventsHover
                   ? '0.4'
                   : profileHover
-                  ? '0.4'
-                  : recruitmentsHover
-                  ? '1.2'
-                  : '0.8',
+                    ? '0.4'
+                    : recruitmentsHover
+                      ? '1.2'
+                      : '0.8',
               }}
             >
               <path

@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import HeroSection from '../components/HeroSection'
 import '../styles/landingpage.css'
 
-import scrollDown from "../assets/scrolldown_icon.svg"
+import scrollDown from '../assets/scrolldown_icon.svg'
 
 function LandingPage() {
   return (
