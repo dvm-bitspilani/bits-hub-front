@@ -18,12 +18,11 @@ a {
   text-decoration: none;
 }
 
-#root{
+#root {
   height: 200vh; /* for testing */
   background-color: black;
-
 }
-.temp-section{
+.temp-section {
   height: 100vh;
 }
 
