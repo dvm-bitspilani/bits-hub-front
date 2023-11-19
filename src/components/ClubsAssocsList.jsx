@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from 'react'
+import ClubAssocLink from '../helpers/ClubAssocLink'
 import PropTypes from 'prop-types'
 import Cross from '../helpers/CrossIcon'
 
-function ClubsAssocsList({ selectedCategory }) {
+function ClubsAssocsList({ selectedCategory , data }) {
+    console.log(data)
+
   const [selectedFilters, setSelectedFilters] = useState([])
+  const [filteredData, setFilteredData] = useState(data)
+
+  useEffect(() => {
+    if(selectedCategory === 'clubs'){
+        setFilteredData(data[0]['clubs'])
+    }
+    if(selectedCategory === 'assocs'){
+        setFilteredData(data[0]['associations'])
+    }
+  },[selectedCategory , data])
+
 
   const handleFilterClick = (filter) => {
     setSelectedFilters((prevSelectedFilters) => {
@@ -20,6 +34,9 @@ function ClubsAssocsList({ selectedCategory }) {
   useEffect(() => {
     setSelectedFilters([])
   }, [selectedCategory])
+
+
+  console.log(filteredData)
 
   return (
     <React.Fragment>
@@ -53,13 +70,18 @@ function ClubsAssocsList({ selectedCategory }) {
             </div>
           </div>
         </div>
+        {filteredData.map((club) => (
+            <ClubAssocLink key={club.id} club={club} />
+        ))}
+
       </div>
     </React.Fragment>
   )
 }
 
+export default ClubsAssocsList
+
 ClubsAssocsList.propTypes = {
   selectedCategory: PropTypes.string,
+  data: PropTypes.array,
 }
-
-export default ClubsAssocsList

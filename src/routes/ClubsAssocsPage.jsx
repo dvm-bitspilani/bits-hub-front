@@ -5,8 +5,6 @@ import '../styles/clubsassocs.css'
 
 import data from './club_assoc_data' // will use api later
 
-console.log(data)
-
 function ClubsAssocsPage() {
   const [categorySelected, setCategorySelected] = useState('clubs')
 
@@ -36,7 +34,7 @@ function ClubsAssocsPage() {
             <p>ASSOCIATIONS</p>
           </div>
         </div>
-        <ClubsAssocsList selectedCategory={categorySelected} />
+        <ClubsAssocsList selectedCategory={categorySelected} data={data} />
       </section>
     </React.Fragment>
   )

@@ -5,9 +5,9 @@ import RoutesHandler from './RoutesHandler.jsx'
 import './global.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <React.Fragment>
     <BrowserRouter>
       <RoutesHandler />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.Fragment>
 )
