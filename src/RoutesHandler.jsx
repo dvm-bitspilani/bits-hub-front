@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import LandingPage from './routes/LandingPage'
+import ClubsAssocsPage from "./routes/ClubsAssocsPage"
 
 function RoutesHandler() {
   const location = useLocation()
@@ -16,7 +17,7 @@ function RoutesHandler() {
           exact
           element={<h1>recruitments page</h1>}
         />
-        <Route path="/clubs&assocs" exact element={<h1>clubs&assoc page</h1>} />
+        <Route path="/clubs&assocs" exact element={<ClubsAssocsPage />} />
       </Routes>
     </React.Fragment>
   )

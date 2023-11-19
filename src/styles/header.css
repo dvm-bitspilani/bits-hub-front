@@ -32,6 +32,7 @@
   font-family: 'Gilroy-Bold';
   color: #fff;
   font-size: 60px;
+  transform: translateY(2px);
 }
 .header-bg img {
   cursor: pointer;
