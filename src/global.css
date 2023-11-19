@@ -9,6 +9,7 @@ body {
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  background-color: black;
 }
 html::-webkit-scrollbar {
   display: none;
@@ -20,7 +21,7 @@ a {
 #root{
   height: 200vh; /* for testing */
   background-color: black;
-  
+
 }
 .temp-section{
   height: 100vh;
