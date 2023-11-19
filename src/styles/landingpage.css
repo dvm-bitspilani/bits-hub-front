@@ -1,11 +1,8 @@
 .landing-bg {
   background-color: #000;
   width: 100dvw;
-  min-height: 100dvh;
-  padding-top: 1vh;
-  margin-top: 10vh;
-
-  height: 200dvh; /*temporarily*/
+  height: 100dvh;
+  padding-top: 11vh;
 }
 .scroll-down {
   display: flex;

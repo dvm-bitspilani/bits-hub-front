@@ -14,14 +14,17 @@ function LandingPage() {
 
   return (
     <React.Fragment>
-      <div className="landing-bg">
+      <section className="landing-bg">
         <Header />
         <HeroSection />
         <div className="scroll-down" onClick={scrollToNextSection}>
           <span>Scroll</span>
           <img src={scrollDown} alt="down" />
         </div>
-      </div>
+      </section>
+      <section className='temp-section'>
+
+      </section>
     </React.Fragment>
   );
 }

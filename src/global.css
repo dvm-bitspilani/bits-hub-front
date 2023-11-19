@@ -16,6 +16,16 @@ html::-webkit-scrollbar {
 a {
   text-decoration: none;
 }
+
+#root{
+  height: 200vh; /* for testing */
+  background-color: black;
+  
+}
+.temp-section{
+  height: 100vh;
+}
+
 @font-face {
   font-family: 'Gilroy-Bold';
   src: url(./fonts/Gilroy-Bold.ttf);
