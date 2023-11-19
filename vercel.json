@@ -1,0 +1,13 @@
+{
+    "routes": [
+      {
+        "src": "/(events|profile|recruitments|clubs_assocs|clubs_assocs/:id)",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/",
+        "dest": "/index.html"
+      }
+    ]
+  }
+  

@@ -16,6 +16,7 @@ function HeroSectionLink({
   eventsHover,
   profileHover,
   recruitmentsHover,
+  linkto
 }) {
   const [isHovered, setIsHovered] = useState(false)
 
@@ -29,7 +30,7 @@ function HeroSectionLink({
   return (
     <React.Fragment>
       <Link
-        to={text.toLowerCase().replace(/ /g, '')}
+        to={linkto}
         className="hero-link"
         style={style}
         onMouseEnter={() => {
@@ -162,4 +163,5 @@ HeroSectionLink.propTypes = {
   eventsHover: PropTypes.bool,
   profileHover: PropTypes.bool,
   recruitmentsHover: PropTypes.bool,
+  linkto: PropTypes.string,
 }

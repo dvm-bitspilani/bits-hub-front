@@ -18,9 +18,9 @@ function RoutesHandler() {
           exact
           element={<h1>recruitments page</h1>}
         />
-        <Route path="/clubs&assocs" exact element={<ClubsAssocsPage />} />
+        <Route path="/clubs_assocs" exact element={<ClubsAssocsPage />} />
         <Route
-          path="/clubs&assocs/:id"
+          path="/clubs_assocs/:id"
           element={<ClubsAssocsDetailPage />}
         />
       </Routes>

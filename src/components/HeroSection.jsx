@@ -30,6 +30,7 @@ function HeroSection() {
           backgroundColor="#2541B2"
           gridArea=" 1 / 1 / 3 / 3"
           setStateHover={setClubsHover}
+          linkto={'clubs_assocs'}
         />
         <HeroSectionLink
           text={'Events'}
@@ -40,6 +41,7 @@ function HeroSection() {
           backgroundColor="#ECECEC"
           gridArea=" 1 / 3 / 2 / 4"
           setStateHover={setEventsHover}
+          linkto={'events'}
         />
         <HeroSectionLink
           text={'Profile'}
@@ -50,6 +52,7 @@ function HeroSection() {
           backgroundColor="#C13E42"
           gridArea=" 1 / 4 / 2 / 5"
           setStateHover={setProfileHover}
+          linkto={'profile'}
         />
         <HeroSectionLink
           text={'recruitments'}
@@ -60,6 +63,7 @@ function HeroSection() {
           backgroundColor="#1C976B"
           gridArea=" 2 / 3 / 3 / 5"
           setStateHover={setRecruitmentsHover}
+          linkto={'recruitments'}
         />
       </div>
     </React.Fragment>
