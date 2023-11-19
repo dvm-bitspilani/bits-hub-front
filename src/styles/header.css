@@ -4,6 +4,11 @@
   align-items: center;
   padding: 15px 25px;
   height: 10vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: black;
 }
 .hamContainer {
   display: flex;
