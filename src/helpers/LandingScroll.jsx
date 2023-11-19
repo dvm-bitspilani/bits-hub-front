@@ -12,7 +12,7 @@ const useScroll = (threshold) => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [threshold])
 
   return triggered
 }
