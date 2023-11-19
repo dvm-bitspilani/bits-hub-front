@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import '../styles/herosection.css'
 import bgImageIcons from '../assets/Clubs&Assocs.svg'
+import bgImageIconsHover from "../assets/Clubs&AssocsHover.svg"
 
 function HeroSectionLink({
   backgroundColor,
@@ -18,8 +19,9 @@ function HeroSectionLink({
   const style = {
     backgroundColor: backgroundColor,
     gridArea: gridArea,
-    backgroundImage: bgImage ? `url(${bgImageIcons})` : 'none',
+    backgroundImage: bgImage ? (isHovered ? `url(${bgImageIconsHover})` : `url(${bgImageIcons})`) : 'none',
     cursor: isHovered ? 'pointer' : 'default',
+    scale: isHovered ? '0.98' : '1',
   }
 
   return (
