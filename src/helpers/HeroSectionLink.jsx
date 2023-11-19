@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import '../styles/herosection.css'
+import { Link } from 'react-router-dom'
 
 function HeroSectionLink({
   backgroundColor,
@@ -27,7 +28,8 @@ function HeroSectionLink({
 
   return (
     <React.Fragment>
-      <div
+      <Link
+        to={text.toLowerCase().replace(/ /g, '')}
         className="hero-link"
         style={style}
         onMouseEnter={() => {
@@ -140,7 +142,7 @@ function HeroSectionLink({
             </div>
           </div>
         )}
-      </div>
+      </Link>
     </React.Fragment>
   )
 }

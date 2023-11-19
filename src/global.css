@@ -13,7 +13,9 @@ body {
 html::-webkit-scrollbar {
   display: none;
 }
-
+a {
+  text-decoration: none;
+}
 @font-face {
   font-family: 'Gilroy-Bold';
   src: url(./fonts/Gilroy-Bold.ttf);
