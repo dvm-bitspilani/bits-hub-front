@@ -49,9 +49,9 @@ function LandingPage() {
       <section
         className="temp-section"
         ref={section2Ref}
-        style={{paddingTop: '10vh'}}
+        style={{ paddingTop: '10vh' }}
       >
-        <p style={{color: 'white'}}> scroll snap</p>
+        <p style={{ color: 'white' }}> scroll snap</p>
       </section>
     </React.Fragment>
   )

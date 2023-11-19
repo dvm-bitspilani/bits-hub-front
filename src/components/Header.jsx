@@ -1,15 +1,15 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import '../styles/header.css'
 
 import searchIcon from '../assets/search_icon.svg'
 
 function Header() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate('/');
-  };
+    navigate('/')
+  }
 
   return (
     <React.Fragment>

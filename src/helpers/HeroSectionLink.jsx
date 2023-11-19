@@ -16,7 +16,7 @@ function HeroSectionLink({
   eventsHover,
   profileHover,
   recruitmentsHover,
-  linkto
+  linkto,
 }) {
   const [isHovered, setIsHovered] = useState(false)
 
