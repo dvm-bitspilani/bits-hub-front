@@ -3,6 +3,8 @@
   width: 100dvw;
   min-height: 100dvh;
   padding-top: 1vh;
+
+  height: 200dvh; /*temporarily*/
 }
 .scroll-down {
   display: flex;
@@ -10,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .scroll-down span {
   font-family: 'Google Sans normal';
@@ -19,4 +22,23 @@
 .scroll-down img {
   padding-left: 8px;
   transform: translateY(2px);
+  animation: woggle 1s infinite;
+}
+
+@keyframes woggle {
+  0% {
+    transform: translateY(2px);
+  }
+  45% {
+    transform: translateY(2px);
+  }
+  55% {
+    transform: translateY(5px);
+  }
+  65% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
 }
