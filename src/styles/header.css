@@ -32,6 +32,7 @@
   font-family: 'Gilroy-Bold';
   color: #fff;
   font-size: 60px;
+  cursor: pointer;
 }
 .header-bg img {
   cursor: pointer;
