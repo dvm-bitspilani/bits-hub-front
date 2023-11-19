@@ -70,10 +70,11 @@ function ClubsAssocsList({ selectedCategory , data }) {
             </div>
           </div>
         </div>
-        {filteredData.map((club) => (
-            <ClubAssocLink key={club.id} club={club} />
-        ))}
-
+        <div className='linksContainer'>
+            {filteredData.map((club) => (
+                <ClubAssocLink key={club.id} club={club} />
+            ))}
+        </div>
       </div>
     </React.Fragment>
   )
