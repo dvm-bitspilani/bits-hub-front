@@ -16,6 +16,27 @@
   position: relative;
   transition: all 0.3s ease;
 }
+.hero-link-bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+}
+.hero-link-bg svg{
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+    scale: 0.8;
+    transition: all 0.3s ease;
+}
+.hero-link:hover .hero-link-bg svg rect ,.hero-link:hover .hero-link-bg svg circle,.hero-link:hover .hero-link-bg svg path{
+    fill : #8987BE
+}
 .hero-link-label{
     display: flex;
     justify-content: space-between;
@@ -61,5 +82,21 @@
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+@keyframes rotateContainer {
+    0% {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(360deg) translate(-50%, -50%);
     }
 }
