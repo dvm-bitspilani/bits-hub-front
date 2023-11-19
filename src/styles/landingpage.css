@@ -20,7 +20,7 @@
 .scroll-down img {
   padding-left: 8px;
   transform: translateY(2px);
-  animation: woggle 1s infinite;
+  animation: woggle 2s infinite;
 }
 
 @keyframes woggle {
