@@ -31,6 +31,10 @@ a {
   src: url(./fonts/Gilroy-Bold.ttf);
 }
 @font-face {
+  font-family: 'Gilroy-Medium';
+  src: url(./fonts/Gilroy-Medium.ttf);
+}
+@font-face {
   font-family: 'The 27 Club';
   src: url(./fonts/The27Club.otf);
 }

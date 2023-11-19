@@ -33,6 +33,7 @@
   color: #fff;
   font-size: 60px;
   cursor: pointer;
+  transform: translateY(2px);
 }
 .header-bg img {
   cursor: pointer;

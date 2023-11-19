@@ -1,0 +1,70 @@
+.clubsassocs-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 12.5vh;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+}
+.switch-panel {
+  border-radius: 23px;
+  border: 3.2px solid #2541b2;
+  margin-bottom: 30px;
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+}
+.category-club,
+.category-assoc {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 19.2px;
+  cursor: pointer;
+}
+.category-assoc p,
+.category-club p {
+  font-family: 'Gilroy-Bold';
+  color: white;
+  font-size: 25.6px;
+  rotate: -90deg;
+}
+.selected-category {
+  background-color: #2541b2;
+}
+.clubsassocs-list-container {
+  width: 100%;
+  padding-left: 50px;
+}
+.filter-container p {
+  font-family: 'Gilroy-Medium';
+  color: white;
+  font-size: 32px;
+}
+.filter-tags-container {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+.filter-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px solid #2541b2;
+  cursor: pointer;
+}
+.filter-tag p {
+  font-family: 'Google Sans normal';
+  color: white;
+  font-size: 16px;
+}
+.filter-tag-selected {
+  background: #2541b2;
+}
+.filter-tag:not(.filter-tag-selected) .filter-icon {
+  display: none;
+}
