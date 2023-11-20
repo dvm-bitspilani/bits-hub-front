@@ -86,6 +86,7 @@ const data = [
           'departmentofvm',
         ],
         CurrentlyRecruiting: true,
+        AnotherFilter:true, //testing
       },
     ],
     assocs: [
