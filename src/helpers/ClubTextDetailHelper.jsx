@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import minus from '../assets/minus.svg'
 import plus from '../assets/plus.svg'
 
-function ClubTextDetailHelper() {
+function ClubTextDetailHelper({data}) {
   const [isAboutOpened, setIsAboutOpened] = useState(true)
   const [isWorkOpened, setIsWorkOpened] = useState(false)
   const [isContactOpened, setIsContactOpened] = useState(false)
@@ -35,14 +35,10 @@ function ClubTextDetailHelper() {
           <p
             style={{
               opacity: isAboutOpened ? '1' : '0',
-              maxHeight: isAboutOpened ? 'unset' : '0',
+              height: isAboutOpened ? 'auto' : '0',
             }}
           >
-            The Department of Visual Media plays an important role in building
-            the software that is the backbone of all the three fests of BITS
-            Pilani - BOSM, Oasis and APOGEE The Department of Visual Media plays
-            an important role in building the software that is the backbone of
-            all the three fests of BITS Pilani - BOSM, Oasis and APOGEE
+            {data[0]["about"]}
           </p>
         </button>
         <button onClick={handleWorkClick}>
@@ -53,14 +49,9 @@ function ClubTextDetailHelper() {
           <p
             style={{
               opacity: isWorkOpened ? '1' : '0',
-              maxHeight: isWorkOpened ? 'unset' : '0',
+              height: isWorkOpened ? 'auto' : '0',
             }}
-          >
-            The Department of Visual Media plays an important role in building
-            the software that is the backbone of all the three fests of BITS
-            Pilani - BOSM, Oasis and APOGEE The Department of Visual Media plays
-            an important role in building the software that is the backbone of
-            all the three fests of BITS Pilani - BOSM, Oasis and APOGEE
+          >{data[0]["work_responsibility"]}
           </p>
         </button>
         <button onClick={handleContactClick}>
@@ -70,15 +61,10 @@ function ClubTextDetailHelper() {
           </span>
           <p
             style={{
-              opacity: isContactOpened ? '1' : '0',
-              maxHeight: isContactOpened ? 'unset' : '0',
+              opacity: isContactOpened ? '1' : '0',              
+              height: isContactOpened ? 'auto' : '0',
             }}
-          >
-            The Department of Visual Media plays an important role in building
-            the software that is the backbone of all the three fests of BITS
-            Pilani - BOSM, Oasis and APOGEE The Department of Visual Media plays
-            an important role in building the software that is the backbone of
-            all the three fests of BITS Pilani - BOSM, Oasis and APOGEE
+          >{data[0]["contact"]}
           </p>
         </button>
         <button>
@@ -93,3 +79,7 @@ function ClubTextDetailHelper() {
 }
 
 export default ClubTextDetailHelper
+
+ClubTextDetailHelper.propTypes ={
+    data: PropTypes.array.isRequired
+}
