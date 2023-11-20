@@ -88,7 +88,7 @@ const data = [
         CurrentlyRecruiting: true,
       },
     ],
-    associations: [
+    assocs: [
       {
         id: 'dvm6',
         name: 'Department of Visual Media',
@@ -138,7 +138,7 @@ const data = [
           'visualmedia',
           'departmentofvm',
         ],
-        CurrentlyRecruiting: true,
+        CurrentlyRecruiting: false,
       },
     ],
   },

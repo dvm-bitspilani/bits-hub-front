@@ -1,40 +1,50 @@
-import React, { useState, useEffect } from 'react'
-import ClubAssocLink from '../helpers/ClubAssocLink'
-import PropTypes from 'prop-types'
-import Cross from '../helpers/CrossIcon'
+import React, { useState, useEffect } from 'react';
+import ClubAssocLink from '../helpers/ClubAssocLink';
+import PropTypes from 'prop-types';
+import Cross from '../helpers/CrossIcon';
 
-function ClubsAssocsList({ selectedCategory , data }) {
+function ClubsAssocsList({ selectedCategory, data }) {
 
-  const [selectedFilters, setSelectedFilters] = useState([])
-  const [filteredData, setFilteredData] = useState(data)
+
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    if(selectedCategory === 'clubs'){
-        setFilteredData(data[0]['clubs'])
+    if (selectedCategory === 'clubs') {
+      setFilteredData(data[0]?.clubs || []);
     }
-    if(selectedCategory === 'assocs'){
-        setFilteredData(data[0]['associations'])
+    if (selectedCategory === 'assocs') {
+      setFilteredData(data[0]?.assocs || []);
     }
-  },[selectedCategory , data])
-
+  }, [selectedCategory, data]);
 
   const handleFilterClick = (filter) => {
     setSelectedFilters((prevSelectedFilters) => {
-      if (prevSelectedFilters.includes(filter)) {
-        return prevSelectedFilters.filter(
-          (selectedFilter) => selectedFilter !== filter
-        )
-      } else {
-        return [...prevSelectedFilters, filter]
-      }
-    })
-  }
+      const updatedFilters = prevSelectedFilters.includes(filter)
+        ? prevSelectedFilters.filter((selectedFilter) => selectedFilter !== filter)
+        : [...prevSelectedFilters, filter];
+
+      const updatedData = filterDataWithSelectedFilters(updatedFilters);
+
+      setFilteredData(updatedData);
+
+      return updatedFilters;
+    });
+  };
+
+  const filterDataWithSelectedFilters = (filters) => {
+    if (filters.length === 0) {
+      return selectedCategory === 'clubs' ? data[0]?.clubs || [] : data[0]?.assocs || [];
+    }
+
+    return (data[0]?.[selectedCategory] || []).filter((item) =>
+      filters.every((filter) => item[filter] === true)
+    );
+  };
 
   useEffect(() => {
-    setSelectedFilters([])
-  }, [selectedCategory])
-
-
+    setSelectedFilters([]);
+  }, [selectedCategory]);
 
   return (
     <React.Fragment>
@@ -44,9 +54,7 @@ function ClubsAssocsList({ selectedCategory , data }) {
           <div className="filter-tags-container">
             <div
               className={`filter-tag ${
-                selectedFilters.includes('CurrentlyRecruiting')
-                  ? 'filter-tag-selected'
-                  : ''
+                selectedFilters.includes('CurrentlyRecruiting') ? 'filter-tag-selected' : ''
               }`}
               data-filter="CurrentlyRecruiting"
               onClick={() => handleFilterClick('CurrentlyRecruiting')}
@@ -56,9 +64,7 @@ function ClubsAssocsList({ selectedCategory , data }) {
             </div>
             <div
               className={`filter-tag ${
-                selectedFilters.includes('AnotherFilter')
-                  ? 'filter-tag-selected'
-                  : ''
+                selectedFilters.includes('AnotherFilter') ? 'filter-tag-selected' : ''
               }`}
               data-filter="AnotherFilter"
               onClick={() => handleFilterClick('AnotherFilter')}
@@ -68,19 +74,19 @@ function ClubsAssocsList({ selectedCategory , data }) {
             </div>
           </div>
         </div>
-        <div className='linksContainer'>
-            {filteredData.map((club) => (
-                <ClubAssocLink key={club.id} club={club} />
-            ))}
+        <div className="linksContainer">
+          {filteredData.map((club) => (
+            <ClubAssocLink key={club.id} club={club} />
+          ))}
         </div>
       </div>
     </React.Fragment>
-  )
+  );
 }
 
-export default ClubsAssocsList
+export default ClubsAssocsList;
 
 ClubsAssocsList.propTypes = {
   selectedCategory: PropTypes.string,
-  data: PropTypes.array,
-}
+  data: PropTypes.arrayOf(PropTypes.object)
+};
