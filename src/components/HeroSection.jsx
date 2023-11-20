@@ -46,7 +46,7 @@ function HeroSection() {
         <HeroSectionLink
           text={'Profile'}
           textColor={'#FFFFFF'}
-          textHover={'PlaceHolder text which will be replaced.'}
+          textHover={'View your profile and subscriptions.'}
           icon={profileIcon}
           textHoverSize={'52px'}
           backgroundColor="#C13E42"
@@ -57,7 +57,7 @@ function HeroSection() {
         <HeroSectionLink
           text={'recruitments'}
           textColor={'#FFFFFF'}
-          textHover={'PlaceHolder text which will be replaced.'}
+          textHover={'Apply for the currently ongoing Recruitments.'}
           icon={recruitmentsIcon}
           textHoverSize={'52px'}
           backgroundColor="#1C976B"

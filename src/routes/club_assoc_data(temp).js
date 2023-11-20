@@ -17,6 +17,10 @@ const data = [
           'departmentofvm',
         ],
         CurrentlyRecruiting: true,
+        Technical: true,
+        Creative: true,
+        Finance: true,
+        SoftSkills: true,
         // and more similar boolean type value which design will add
       },
       {
@@ -86,7 +90,7 @@ const data = [
           'departmentofvm',
         ],
         CurrentlyRecruiting: true,
-        AnotherFilter:true, //testing
+        AnotherFilter: true, //testing
       },
     ],
     assocs: [

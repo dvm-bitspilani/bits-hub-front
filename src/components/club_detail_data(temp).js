@@ -1,6 +1,7 @@
-const data = [{
-    id: "dvm",
-    club_image: "../assets/clubimageplaceholder.svg",
+const data = [
+  {
+    id: 'dvm',
+    club_image: '../assets/clubimageplaceholder.svg',
     name: 'Department of Visual Media',
     category: 'club',
     logo: '../assets/DVM_Logo_white.svg',
@@ -15,7 +16,7 @@ const data = [{
       'departmentofvm',
     ],
     CurrentlyRecruiting: true,
-    
-}];
+  },
+]
 
-export default data;
+export default data

@@ -1,50 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import ClubAssocLink from '../helpers/ClubAssocLink';
-import PropTypes from 'prop-types';
-import Cross from '../helpers/CrossIcon';
+import React, { useState, useEffect } from 'react'
+import ClubAssocLink from '../helpers/ClubAssocLink'
+import PropTypes from 'prop-types'
+import Cross from '../helpers/CrossIcon'
 
 function ClubsAssocsList({ selectedCategory, data }) {
-
-
-  const [selectedFilters, setSelectedFilters] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
+  const [selectedFilters, setSelectedFilters] = useState([])
+  const [filteredData, setFilteredData] = useState([])
 
   useEffect(() => {
     if (selectedCategory === 'clubs') {
-      setFilteredData(data[0]?.clubs || []);
+      setFilteredData(data[0]?.clubs || [])
     }
     if (selectedCategory === 'assocs') {
-      setFilteredData(data[0]?.assocs || []);
+      setFilteredData(data[0]?.assocs || [])
     }
-  }, [selectedCategory, data]);
+  }, [selectedCategory, data])
 
   const handleFilterClick = (filter) => {
     setSelectedFilters((prevSelectedFilters) => {
       const updatedFilters = prevSelectedFilters.includes(filter)
-        ? prevSelectedFilters.filter((selectedFilter) => selectedFilter !== filter)
-        : [...prevSelectedFilters, filter];
+        ? prevSelectedFilters.filter(
+            (selectedFilter) => selectedFilter !== filter
+          )
+        : [...prevSelectedFilters, filter]
 
-      const updatedData = filterDataWithSelectedFilters(updatedFilters);
+      const updatedData = filterDataWithSelectedFilters(updatedFilters)
 
-      setFilteredData(updatedData);
+      setFilteredData(updatedData)
 
-      return updatedFilters;
-    });
-  };
+      return updatedFilters
+    })
+  }
 
   const filterDataWithSelectedFilters = (filters) => {
     if (filters.length === 0) {
-      return selectedCategory === 'clubs' ? data[0]?.clubs || [] : data[0]?.assocs || [];
+      return selectedCategory === 'clubs'
+        ? data[0]?.clubs || []
+        : data[0]?.assocs || []
     }
 
     return (data[0]?.[selectedCategory] || []).filter((item) =>
       filters.every((filter) => item[filter] === true)
-    );
-  };
+    )
+  }
 
   useEffect(() => {
-    setSelectedFilters([]);
-  }, [selectedCategory]);
+    setSelectedFilters([])
+  }, [selectedCategory])
 
   return (
     <React.Fragment>
@@ -54,7 +56,9 @@ function ClubsAssocsList({ selectedCategory, data }) {
           <div className="filter-tags-container">
             <div
               className={`filter-tag ${
-                selectedFilters.includes('CurrentlyRecruiting') ? 'filter-tag-selected' : ''
+                selectedFilters.includes('CurrentlyRecruiting')
+                  ? 'filter-tag-selected'
+                  : ''
               }`}
               data-filter="CurrentlyRecruiting"
               onClick={() => handleFilterClick('CurrentlyRecruiting')}
@@ -64,6 +68,52 @@ function ClubsAssocsList({ selectedCategory, data }) {
             </div>
             <div
               className={`filter-tag ${
+                selectedFilters.includes('Technical')
+                  ? 'filter-tag-selected'
+                  : ''
+              }`}
+              data-filter="Technical"
+              onClick={() => handleFilterClick('Technical')}
+            >
+              <p>Technical</p>
+              <Cross />
+            </div>
+            <div
+              className={`filter-tag ${
+                selectedFilters.includes('Creative')
+                  ? 'filter-tag-selected'
+                  : ''
+              }`}
+              data-filter="Creative"
+              onClick={() => handleFilterClick('Creative')}
+            >
+              <p>Creative</p>
+              <Cross />
+            </div>
+            <div
+              className={`filter-tag ${
+                selectedFilters.includes('Finance') ? 'filter-tag-selected' : ''
+              }`}
+              data-filter="Finance"
+              onClick={() => handleFilterClick('Finance')}
+            >
+              <p>Finance</p>
+              <Cross />
+            </div>
+            <div
+              className={`filter-tag ${
+                selectedFilters.includes('SoftSkills')
+                  ? 'filter-tag-selected'
+                  : ''
+              }`}
+              data-filter="SoftSkills"
+              onClick={() => handleFilterClick('SoftSkills')}
+            >
+              <p>Soft Skills</p>
+              <Cross />
+            </div>
+            {/* <div
+              className={`filter-tag ${
                 selectedFilters.includes('AnotherFilter') ? 'filter-tag-selected' : ''
               }`}
               data-filter="AnotherFilter"
@@ -71,7 +121,7 @@ function ClubsAssocsList({ selectedCategory, data }) {
             >
               <p>Another Filter</p>
               <Cross />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="linksContainer">
@@ -81,12 +131,12 @@ function ClubsAssocsList({ selectedCategory, data }) {
         </div>
       </div>
     </React.Fragment>
-  );
+  )
 }
 
-export default ClubsAssocsList;
+export default ClubsAssocsList
 
 ClubsAssocsList.propTypes = {
   selectedCategory: PropTypes.string,
-  data: PropTypes.arrayOf(PropTypes.object)
-};
+  data: PropTypes.arrayOf(PropTypes.object),
+}
