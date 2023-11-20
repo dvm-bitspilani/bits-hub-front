@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import Cross from '../helpers/CrossIcon'
 
 function ClubsAssocsList({ selectedCategory , data }) {
-    console.log(data)
 
   const [selectedFilters, setSelectedFilters] = useState([])
   const [filteredData, setFilteredData] = useState(data)
@@ -36,7 +35,6 @@ function ClubsAssocsList({ selectedCategory , data }) {
   }, [selectedCategory])
 
 
-  console.log(filteredData)
 
   return (
     <React.Fragment>
