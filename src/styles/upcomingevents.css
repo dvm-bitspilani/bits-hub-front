@@ -1,0 +1,59 @@
+.upcomingeventsheading {
+  padding-left: 25px;
+  color: #ececec;
+  font-family: 'Gilroy-Bold';
+  font-size: 55px;
+
+  margin-top: 20vh; /* temp*/
+}
+.upcomingeventscontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.upcomingevent {
+  border-radius: 24px;
+  border: 2px solid #ececec;
+  padding: 30px;
+  padding-right: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.upcomingevent span {
+  color: #ececec;
+  font-family: 'Google Sans normal';
+  font-size: 32px;
+  line-height: 32px;
+}
+.upcomingevent:hover {
+  background-color: #ececec;
+  color: black;
+}
+.upcomingevent:hover span {
+  color: #000;
+  animation-play-state: running;
+}
+
+.upcomingevent .span2 {
+  animation: marquee 10s linear infinite;
+  animation-play-state: paused;
+  display: inline-block;
+}
+.upcomingevent .span1 {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

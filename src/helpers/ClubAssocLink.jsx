@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link , useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import dvm from '../assets/DVM_Logo_white.svg'
 
 function ClubAssocLink({ club }) {
+  const location = useLocation()
+  const currentPath = location.pathname
 
-  const location = useLocation();
-  const currentPath = location.pathname;
-  
-  const targetUrl = currentPath.endsWith('/') ? `${currentPath}${club.id}` : `/clubs_assocs/${club.id}`;
+  const targetUrl = currentPath.endsWith('/')
+    ? `${currentPath}${club.id}`
+    : `/clubs_assocs/${club.id}`
 
   console.log(club)
   return (

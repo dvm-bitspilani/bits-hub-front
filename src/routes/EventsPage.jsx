@@ -1,15 +1,16 @@
-import React from "react";
-import Header from "../components/Header";
+import React from 'react'
+import Header from '../components/Header'
+import UpcomingEvents from '../components/UpcomingEvents'
 import '../styles/eventspage.css'
 
-function EventsPage (){
+function EventsPage() {
+  return (
+    <React.Fragment>
+      <Header />
 
-    return(
-        <React.Fragment>
-            <Header />
-
-        </React.Fragment>
-    )
+      <UpcomingEvents />
+    </React.Fragment>
+  )
 }
 
-export default EventsPage;
+export default EventsPage

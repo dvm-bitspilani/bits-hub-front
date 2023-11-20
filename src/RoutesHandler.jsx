@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import LandingPage from './routes/LandingPage'
-import EventsPage from "./routes/EventsPage"
+import EventsPage from './routes/EventsPage'
 import ClubsAssocsPage from './routes/ClubsAssocsPage'
 import ClubsAssocsDetailPage from './components/ClubsAssocsDetailPage'
 

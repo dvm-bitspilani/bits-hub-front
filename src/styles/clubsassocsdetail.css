@@ -62,52 +62,52 @@
   padding: 10px 20px;
   width: 130px;
 }
-.nameofclub{
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.nameofclub {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.nameofclub img{
-    cursor: pointer;
+.nameofclub img {
+  cursor: pointer;
 }
-.nameofclub h1{
-    color: #FFF;
-    font-family: 'Gilroy-Bold';
-    font-size: 60px; 
-    transform: translateY(4px);
+.nameofclub h1 {
+  color: #fff;
+  font-family: 'Gilroy-Bold';
+  font-size: 60px;
+  transform: translateY(4px);
 }
-.clubtype{
-    border-radius: 8px;
-    border: 2.66px solid #2541B2; 
-    display: inline-block;
-    padding: 10px 20px;
-    margin-left: 25px;
-    color: #FFF;
-    font-family: 'Google Sans normal';
-    font-size: 18px; 
-    margin-top: 10px;
+.clubtype {
+  border-radius: 8px;
+  border: 2.66px solid #2541b2;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-left: 25px;
+  color: #fff;
+  font-family: 'Google Sans normal';
+  font-size: 18px;
+  margin-top: 10px;
 }
-.similar{
-    color: #FFF;
-    font-family: 'Google Sans normal';
-    font-size: 44px; 
-    padding-left: 25px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+.similar {
+  color: #fff;
+  font-family: 'Google Sans normal';
+  font-size: 44px;
+  padding-left: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
-.similarClubContainer{
-    display: flex;
-    padding-left: 25px;
-    gap: 16px;
-    margin-bottom: 30px;
+.similarClubContainer {
+  display: flex;
+  padding-left: 25px;
+  gap: 16px;
+  margin-bottom: 30px;
 }
 
-@media (min-width:1400px) {
-    .club-detail-container .clubimgcontainer {
-        width: 30%;
-    }
-    .club-text-detail-container{
-        width: 70%;
-    }
+@media (min-width: 1400px) {
+  .club-detail-container .clubimgcontainer {
+    width: 30%;
+  }
+  .club-text-detail-container {
+    width: 70%;
+  }
 }

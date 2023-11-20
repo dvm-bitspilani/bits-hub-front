@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import minus from '../assets/minus.svg'
 import plus from '../assets/plus.svg'
 
-function ClubTextDetailHelper({data}) {
+function ClubTextDetailHelper({ data }) {
   const [isAboutOpened, setIsAboutOpened] = useState(true)
   const [isWorkOpened, setIsWorkOpened] = useState(false)
   const [isContactOpened, setIsContactOpened] = useState(false)
@@ -38,7 +38,7 @@ function ClubTextDetailHelper({data}) {
               height: isAboutOpened ? 'auto' : '0',
             }}
           >
-            {data[0]["about"]}
+            {data[0]['about']}
           </p>
         </button>
         <button onClick={handleWorkClick}>
@@ -51,7 +51,8 @@ function ClubTextDetailHelper({data}) {
               opacity: isWorkOpened ? '1' : '0',
               height: isWorkOpened ? 'auto' : '0',
             }}
-          >{data[0]["work_responsibility"]}
+          >
+            {data[0]['work_responsibility']}
           </p>
         </button>
         <button onClick={handleContactClick}>
@@ -61,10 +62,11 @@ function ClubTextDetailHelper({data}) {
           </span>
           <p
             style={{
-              opacity: isContactOpened ? '1' : '0',              
+              opacity: isContactOpened ? '1' : '0',
               height: isContactOpened ? 'auto' : '0',
             }}
-          >{data[0]["contact"]}
+          >
+            {data[0]['contact']}
           </p>
         </button>
         <button>
@@ -80,6 +82,6 @@ function ClubTextDetailHelper({data}) {
 
 export default ClubTextDetailHelper
 
-ClubTextDetailHelper.propTypes ={
-    data: PropTypes.array.isRequired
+ClubTextDetailHelper.propTypes = {
+  data: PropTypes.array.isRequired,
 }
