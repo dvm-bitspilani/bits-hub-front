@@ -144,6 +144,8 @@ const data = [
           'departmentofvm',
         ],
         CurrentlyRecruiting: false,
+        BranchesAssocs: true,
+        RegionalAssocs: true,
       },
     ],
   },

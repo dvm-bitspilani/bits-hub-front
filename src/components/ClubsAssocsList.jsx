@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ClubAssocLink from '../helpers/ClubAssocLink'
+import FilterClubsAssocs from '../helpers/FilterClubsAssocs'
 import PropTypes from 'prop-types'
-import Cross from '../helpers/CrossIcon'
 
 function ClubsAssocsList({ selectedCategory, data }) {
   const [selectedFilters, setSelectedFilters] = useState([])
@@ -53,76 +53,11 @@ function ClubsAssocsList({ selectedCategory, data }) {
       <div className="clubsassocs-list-container">
         <div className="filter-container">
           <p>Filter by:</p>
-          <div className="filter-tags-container">
-            <div
-              className={`filter-tag ${
-                selectedFilters.includes('CurrentlyRecruiting')
-                  ? 'filter-tag-selected'
-                  : ''
-              }`}
-              data-filter="CurrentlyRecruiting"
-              onClick={() => handleFilterClick('CurrentlyRecruiting')}
-            >
-              <p>Currently Recruiting</p>
-              <Cross />
-            </div>
-            <div
-              className={`filter-tag ${
-                selectedFilters.includes('Technical')
-                  ? 'filter-tag-selected'
-                  : ''
-              }`}
-              data-filter="Technical"
-              onClick={() => handleFilterClick('Technical')}
-            >
-              <p>Technical</p>
-              <Cross />
-            </div>
-            <div
-              className={`filter-tag ${
-                selectedFilters.includes('Creative')
-                  ? 'filter-tag-selected'
-                  : ''
-              }`}
-              data-filter="Creative"
-              onClick={() => handleFilterClick('Creative')}
-            >
-              <p>Creative</p>
-              <Cross />
-            </div>
-            <div
-              className={`filter-tag ${
-                selectedFilters.includes('Finance') ? 'filter-tag-selected' : ''
-              }`}
-              data-filter="Finance"
-              onClick={() => handleFilterClick('Finance')}
-            >
-              <p>Finance</p>
-              <Cross />
-            </div>
-            <div
-              className={`filter-tag ${
-                selectedFilters.includes('SoftSkills')
-                  ? 'filter-tag-selected'
-                  : ''
-              }`}
-              data-filter="SoftSkills"
-              onClick={() => handleFilterClick('SoftSkills')}
-            >
-              <p>Soft Skills</p>
-              <Cross />
-            </div>
-            {/* <div
-              className={`filter-tag ${
-                selectedFilters.includes('AnotherFilter') ? 'filter-tag-selected' : ''
-              }`}
-              data-filter="AnotherFilter"
-              onClick={() => handleFilterClick('AnotherFilter')}
-            >
-              <p>Another Filter</p>
-              <Cross />
-            </div> */}
-          </div>
+          <FilterClubsAssocs
+            selectedCategory={selectedCategory}
+            selectedFilters={selectedFilters}
+            handleFilterClick={handleFilterClick}
+          />
         </div>
         <div className="linksContainer">
           {filteredData.map((club) => (
