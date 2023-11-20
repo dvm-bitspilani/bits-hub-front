@@ -64,6 +64,26 @@ function ClubsAssocsList({ selectedCategory, data }) {
             </div>
             <div
               className={`filter-tag ${
+                selectedFilters.includes('CurrentlyRecruiting') ? 'filter-tag-selected' : ''
+              }`}
+              data-filter="CurrentlyRecruiting"
+              onClick={() => handleFilterClick('CurrentlyRecruiting')}
+            >
+              <p>Tchnical</p>
+              <Cross />
+            </div>
+            <div
+              className={`filter-tag ${
+                selectedFilters.includes('CurrentlyRecruiting') ? 'filter-tag-selected' : ''
+              }`}
+              data-filter="CurrentlyRecruiting"
+              onClick={() => handleFilterClick('CurrentlyRecruiting')}
+            >
+              <p>Creative</p>
+              <Cross />
+            </div>
+            <div
+              className={`filter-tag ${
                 selectedFilters.includes('AnotherFilter') ? 'filter-tag-selected' : ''
               }`}
               data-filter="AnotherFilter"
