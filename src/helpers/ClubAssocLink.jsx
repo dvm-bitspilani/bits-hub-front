@@ -5,7 +5,6 @@ import dvm from "../assets/DVM_Logo_white.svg";
 
 function ClubAssocLink({club}){
 
-    console.log(club)
 
     // {
     //     "id": "dvm",
