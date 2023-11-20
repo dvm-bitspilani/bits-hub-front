@@ -100,7 +100,7 @@ function HeroSectionLink({
                     ? '#8987BE'
                     : recruitmentsHover
                       ? '#8987BE'
-                      : '#FEFEFE'
+                      : '#ECECEC'
                 }
               />
             </svg>

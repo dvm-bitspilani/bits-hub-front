@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import LandingPage from './routes/LandingPage'
+import EventsPage from "./routes/EventsPage"
 import ClubsAssocsPage from './routes/ClubsAssocsPage'
 import ClubsAssocsDetailPage from './components/ClubsAssocsDetailPage'
 
@@ -11,7 +12,7 @@ function RoutesHandler() {
     <React.Fragment>
       <Routes key={location.pathname} location={location}>
         <Route path="/" exact element={<LandingPage />} />
-        <Route path="/events" exact element={<h1>events page</h1>} />
+        <Route path="/events" exact element={<EventsPage />} />
         <Route path="/profile" exact element={<h1>profile page</h1>} />
         <Route
           path="/recruitments"
