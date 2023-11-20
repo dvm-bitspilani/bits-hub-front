@@ -19,7 +19,7 @@ a {
 }
 
 #root {
-  height: 200vh; /* for testing */
+  /* height: 200vh; for testing */
   background-color: black;
 }
 .temp-section {
@@ -41,4 +41,8 @@ a {
 @font-face {
   font-family: 'Google Sans normal';
   src: url(./fonts/GoogleSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'Google Sans thin';
+  src: url(./fonts/GoogleSans-Thin.ttf);
 }

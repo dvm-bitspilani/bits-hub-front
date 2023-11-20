@@ -3,7 +3,6 @@
   height: 100vh;
   padding-top: 12.5vh;
   padding-left: 25px;
-  padding-right: 25px;
   display: flex;
 }
 .switch-panel {
@@ -36,7 +35,15 @@
 }
 .clubsassocs-list-container {
   width: 100%;
-  padding-left: 50px;
+  padding-left: 30px;
+  height: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 32px;
+}
+.clubsassocs-list-container::-webkit-scrollbar {
+  display: none;
 }
 .filter-container p {
   font-family: 'Gilroy-Medium';
@@ -72,19 +79,33 @@
     margin-top: 32px;
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 16px;
 }
 .clubLink{
     border-radius: 24px;
     border: 4px solid transparent;
     background: #1E1E1E; 
-    padding: 20px;
-    max-width: 30%;
+    padding: 10px;
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .clubLink:hover{
     border: 4px solid #2541B2;
 }
 .imgContainer{
+  border-radius: 10.64px;
+  background: rgba(0, 0, 0, 0.4);
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  padding: 20px;
+}
+.imgContainer img{
+  height: 70px;
 }
 .clubLink h3{
     font-family: 'Google Sans normal';
@@ -92,9 +113,31 @@
     font-size: 26px;
 }
 .club-type{
+  border-radius: 8px;
+  border: 2.66px solid #2541B2;
+  background: #2541B2;
+  padding: 10px 20px;
+  width: fit-content;
 }
 .clubLink p{
     font-family: 'Google Sans normal';
     color: white;
     font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+.clubLink-head{
+  display: flex;
+  gap: 16px;
+}
+.clubLink-name{
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  font-family: 'Google Sans normal';
+  font-size: 18px;
+  gap: 5px;
+  justify-content: space-evenly;
+  align-items: start;
 }
