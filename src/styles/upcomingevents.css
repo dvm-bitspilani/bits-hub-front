@@ -35,18 +35,17 @@
 }
 .upcomingevent:hover span {
   color: #000;
-  animation-play-state: running;
 }
 
-.upcomingevent .span2 {
-  animation: marquee 10s linear infinite;
-  animation-play-state: paused;
-  display: inline-block;
-}
+.upcomingevent .span2,
 .upcomingevent .span1 {
   display: inline-block;
+  animation: none; 
+}
+
+.upcomingevent:hover .span2,
+.upcomingevent:hover .span1 {
   animation: marquee 10s linear infinite;
-  animation-play-state: paused;
 }
 
 @keyframes marquee {
