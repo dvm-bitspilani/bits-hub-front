@@ -9,7 +9,7 @@ function ClubAssocLink({ club }) {
 
   const targetUrl = currentPath.endsWith('/')
     ? `${currentPath}${club.id}`
-    : `/clubs_assocs/${club.id}`
+    : `/clubs/${club.id}`
 
   console.log(club)
   return (

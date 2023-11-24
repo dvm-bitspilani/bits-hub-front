@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ClubAssocLink from '../helpers/ClubAssocLink'
-import FilterClubsAssocs from '../helpers/FilterClubsAssocs'
+import FilterClubs from '../helpers/FilterClubs'
 import PropTypes from 'prop-types'
 
 function ClubsAssocsList({ selectedCategory, data }) {
@@ -53,7 +53,7 @@ function ClubsAssocsList({ selectedCategory, data }) {
       <div className="clubsassocs-list-container">
         <div className="filter-container">
           <p>Filter by:</p>
-          <FilterClubsAssocs
+          <FilterClubs
             selectedCategory={selectedCategory}
             selectedFilters={selectedFilters}
             handleFilterClick={handleFilterClick}

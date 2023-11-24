@@ -1,8 +1,8 @@
 import React from 'react'
-import Cross from '../helpers/CrossIcon'
+import Cross from './CrossIcon'
 import PropTypes from 'prop-types'
 
-function FilterClubsAssocs({
+function FilterClubs({
   selectedCategory,
   selectedFilters,
   handleFilterClick,
@@ -111,9 +111,9 @@ function FilterClubsAssocs({
   )
 }
 
-export default FilterClubsAssocs
+export default FilterClubs
 
-FilterClubsAssocs.propTypes = {
+FilterClubs.propTypes = {
   selectedCategory: PropTypes.string.isRequired,
   selectedFilters: PropTypes.array.isRequired,
   handleFilterClick: PropTypes.func.isRequired,

@@ -30,7 +30,7 @@ function HeroSection() {
           backgroundColor="#2541B2"
           gridArea=" 1 / 1 / 3 / 3"
           setStateHover={setClubsHover}
-          linkto={'clubs_assocs'}
+          linkto={'clubs'}
         />
         <HeroSectionLink
           text={'Events'}

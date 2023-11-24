@@ -1,14 +1,14 @@
 import React from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import Header from '../components/Header'
+import Header from './Header'
 import ClubAssocLink from '../helpers/ClubAssocLink'
 import ClubTextDetailHelper from '../helpers/ClubTextDetailHelper'
-import '../styles/clubsassocsdetail.css'
+import '../styles/clubsdetail.css'
 import data from './club_detail_data(temp)'
 import clubimageplaceholder from '../assets/clubimageplaceholder.svg'
 import arrow from '../assets/left_arrow_icon.svg'
 
-function ClubsAssocsDetailPage() {
+function ClubsDetailPage() {
   const { id } = useParams() //this id will be used to fetch club and assoc data from backend
   // in this component we need to fetch the details of the specified club but also all clubs list also
 
@@ -16,7 +16,7 @@ function ClubsAssocsDetailPage() {
   console.log(id)
 
   const handleArrowClick = () => {
-    navigate('/clubs_assocs')
+    navigate('/clubs')
   }
 
   return (
@@ -48,4 +48,4 @@ function ClubsAssocsDetailPage() {
   )
 }
 
-export default ClubsAssocsDetailPage
+export default ClubsDetailPage

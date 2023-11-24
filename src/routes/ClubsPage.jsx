@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
 import ClubsAssocsList from '../components/ClubsAssocsList'
-import '../styles/clubsassocs.css'
+import '../styles/clubs.css'
 
 import data from './club_assoc_data(temp)' // will use api later
 
-function ClubsAssocsPage() {
+function ClubsPage() {
   const [categorySelected, setCategorySelected] = useState('clubs')
 
   return (
@@ -40,4 +40,4 @@ function ClubsAssocsPage() {
   )
 }
 
-export default ClubsAssocsPage
+export default ClubsPage
